@@ -1,0 +1,74 @@
+/* 
+    root element for the scrollable. 
+    when scrolling occurs this element stays still. 
+*/ 
+.xmovie-scr-horz div.scrollable {  
+    /* required settings */ 
+    position:relative; 
+    overflow:hidden; 
+	width: 450px; 
+    /*height:150px;*/
+	float:left;
+} 
+
+.xmovie-scr-horz div.slides_container {
+	height: 160px;
+}
+ 
+/* 
+    root element for scrollable items. Must be absolutely positioned 
+    and it should have a extremely large width to accomodate scrollable items. 
+    it's enough that you set width and height for the root element and 
+    not for this element. 
+*/ 
+.xmovie-scr-horz div.scrollable div.items { 
+    /* this cannot be too large 
+    width:20000em; 
+    position:absolute; */ 
+} 
+ 
+/* 
+    a single item. must be floated in horizontal scrolling. 
+    typically, this element is the one that *you* will style 
+    the most. 
+*/ 
+.xmovie-scr-horz div.scrollable div.items div { 
+} 
+ 
+/* you may want to setup some decorations to active the item */ 
+.xmovie-scr-horz div.items div.active { 
+    border:1px inset #ccc; 
+    background-color:#fff; 
+}
+
+.xmovie-scr-horz .scr-horiz-container {
+	width:112px;
+	padding-top:10px;
+	float:left;
+}
+
+.scr-horiz-container img {
+	width: 106px;
+}
+
+.xmovie-scr-horz .prevPage {
+	background:transparent url(../images/arrow-left.png) no-repeat scroll 0 0;
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:1px;
+	height:69px;
+	margin:15px 5px;
+	width:32px;
+}
+
+.xmovie-scr-horz .nextPage {
+	background:transparent url(../images/arrow-right.png) no-repeat scroll right 0;
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:1px;
+	height:69px;
+	margin:15px 5px;
+	width:32px;
+}
