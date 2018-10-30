@@ -17,7 +17,7 @@ $listCount = 0;
 $numberOfItems = count($lists);
 $isActiveItem = true;
 
-if(count($numberOfItems) > 0) {
+if($numberOfItems > 0) {
 ?>
 <div id="<?php echo $scroller_id; ?>" class="carousel slide <?php echo $moduleclass_sfx; ?>">
 	<ol class="carousel-indicators">
@@ -70,6 +70,13 @@ if(count($numberOfItems) > 0) {
 					<?php } ?>
 					<?php if($params->get('show_date')) { ?>
 					<li><strong><?php echo JTEXT::_('MOD_XMOVIE_JSCROLLER_DATE_ADDED'); ?>:</strong> <?php echo JHTML::Date($item->creation_date, 'm-d-Y'); ?></li>	
+					<?php } ?>
+					<?php if ($params->get('show_tags')) {
+						$item->tags = new JHelperTags;
+						$item->tags->getItemTags('com_xmovie.movie' , $item->id);
+						$item->tagLayout = new JLayoutFile('joomla.content.tags');
+					?>
+					<li class="movie-tags"><strong><?php echo JTEXT::_('MOD_XMOVIE_JSCROLLER_TAGS'); ?>:</strong> <?php echo $item->tagLayout->render($item->tags->itemTags); ?></li>
 					<?php } ?>
 				</ul>	
 				<?php } ?>

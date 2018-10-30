@@ -15,7 +15,10 @@
 		<filename>helper.php</filename>		
 		<filename>index.html</filename>		
 		<filename>mod_xmovie_jscroller.xml</filename>
+		<folder>css</folder>
+		<folder>images</folder>
 		<folder>languages</folder>
+		<folder>models</folder>
 		<folder>tmpl</folder>
 	</files>
 	<languages>
@@ -68,6 +71,14 @@
 					<option value="0">JNO</option>
 				</field>
 				<field name="show_quicktake" class="btn-group" type="radio" default="1" label="MOD_XMOVIE_JSCROLLER_SHOW_QUICKTAKE" description="MOD_XMOVIE_JSCROLLER_SHOW_QUICKTAKE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_tags" class="btn-group" type="radio" default="0" label="MOD_XMOVIE_JSCROLLER_SHOW_TAGS" description="MOD_XMOVIE_JSCROLLER_SHOW_TAGS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="load_css" class="btn-group" type="radio" default="0" label="MOD_XMOVIE_JSCROLLER_LOAD_CSS" description="MOD_XMOVIE_JSCROLLER_LOAD_CSS_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>

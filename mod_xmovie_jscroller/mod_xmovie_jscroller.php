@@ -23,5 +23,10 @@ MovieHelper::setCookieParams();
 $jscroller = new modXMovieJScrollerHelper($params);
 $lists = $jscroller->getList();
 
+if($params->get('load_css')) {
+    $document = JFactory::getDocument();
+	$document->addStyleSheet(JURI::root(true).'/modules/mod_xmovie_jscroller/css/styles.css');
+}
+
 require JModuleHelper::getLayoutPath('mod_xmovie_jscroller', $params->get('layout', 'default'));
 ?>
